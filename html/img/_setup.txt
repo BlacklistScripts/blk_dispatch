@@ -1,0 +1,1 @@
+If using any premade images, remove the prefix ( e.g : "sa_ambulance" -> "ambulance" )

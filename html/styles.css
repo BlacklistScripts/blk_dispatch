@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+}
+
+.notification-container {
+    position: fixed;
+    top: 10px;
+    right: 35px;
+    width: 400px;
+}
+
+.container {
+    background-color: #045CAD50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: white;
+    animation: showNoti 0.5s ease-out;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.badge {
+    background-color: #f54d90;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.title {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.location-icon {
+    position: absolute;
+    top: -5px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.content {
+    color: white;
+}
+
+.info, .location {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info i, .location i {
+    margin-right: 8px;
+}
+
+.ambulance {
+    box-shadow: -3px 0px 0px 0px rgba(192, 62, 62, 0.9) inset;
+    background: rgba(146, 36, 36, 0.9);
+}
+
+.police {
+    box-shadow: -3px 0px 0px 0px rgba(47, 110, 182, 0.7) inset;
+    background: rgba(26, 68, 116, 0.9);
+}
+
+@keyframes showNoti {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideNoti {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes officerDown {
+    0%   {background:rgba(146, 36, 36, 0.9); box-shadow: -3px 0px 0px 0px rgba(192, 62, 62, 0.9) inset;}
+    10%  {background:rgba(146, 36, 36, 0.9); box-shadow: -3px 0px 0px 0px rgba(192, 62, 62, 0.9) inset;}
+    20%  {background:rgba(26, 68, 116, 0.9); box-shadow: -3px 0px 0px 0px rgba(47, 110, 182, 0.9) inset;}
+    30%  {background:rgba(146, 36, 36, 0.9); box-shadow: -3px 0px 0px 0px rgba(192, 62, 62, 0.9) inset;}
+    40%  {background:rgba(26, 68, 116, 0.9); box-shadow: -3px 0px 0px 0px rgba(47, 110, 182, 0.9) inset;}
+    50%  {background:rgba(146, 36, 36, 0.9); box-shadow: -3px 0px 0px 0px rgba(192, 62, 62, 0.9) inset;}
+    60%  {background:rgba(26, 68, 116, 0.9); box-shadow: -3px 0px 0px 0px rgba(47, 110, 182, 0.9) inset;}
+    70%  {background:rgba(146, 36, 36, 0.9); box-shadow: -3px 0px 0px 0px rgba(192, 62, 62, 0.9) inset;}
+    80%  {background:rgba(26, 68, 116, 0.9); box-shadow: -3px 0px 0px 0px rgba(47, 110, 182, 0.9) inset;}
+    90%  {background:rgba(146, 36, 36, 0.9); box-shadow: -3px 0px 0px 0px rgba(192, 62, 62, 0.9) inset;}
+    100% {background:rgba(26, 68, 116, 0.9); box-shadow: -3px 0px 0px 0px rgba(47, 110, 182, 0.9) inset;}
+}
+
+.container.officer-down {
+    animation: officerDown 3s infinite;
+}
