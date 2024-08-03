@@ -9,8 +9,8 @@ RegisterCommand('dispatchTest', function()
     local callData = {
         badge = 'ESTA',
         title = '000 Call',
-        info = 'PH : 69420 \n help steves touching me',
-        location = 'Legion Square',
+        info = 'Test call info',
+        location = 'Test call location',
         job = 'police',
         length = 5000,
         isImportant = false,
